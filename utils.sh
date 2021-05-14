@@ -12,7 +12,7 @@ get_ip()
 # virsh_vm_exists <domain>
 virsh_vm_exists()
 {
-    virsh list | awk '{print $2}' | grep $1
+    virsh list --all | awk '{print $2}' | grep $1
 }
 
 # virsh_get_ip <domain>
